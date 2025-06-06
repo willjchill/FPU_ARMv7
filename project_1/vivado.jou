@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Thu Jun  5 19:03:19 2025
+# Process ID         : 21092
+# Current directory  : D:/OneDrive/Desktop/vivado_projects/project_1
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent28248 D:\OneDrive\Desktop\vivado_projects\project_1\project_1.xpr
+# Log file           : D:/OneDrive/Desktop/vivado_projects/project_1/vivado.log
+# Journal file       : D:/OneDrive/Desktop/vivado_projects/project_1\vivado.jou
+# Running On         : DESKTOP-WILLIAM
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz
+# CPU Frequency      : 3696 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 17089 MB
+# Swap memory        : 7516 MB
+# Total Virtual      : 24605 MB
+# Available Virtual  : 1834 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/OneDrive/Desktop/vivado_projects/project_1/project_1.xpr
+update_compile_order -fileset sources_1

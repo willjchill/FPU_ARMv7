@@ -1,0 +1,85 @@
+Time resolution is 1 ps
+========================================
+Mantissa Addition/Subtraction Testbench
+========================================
+
+Test 1:    Same sign addition (positive)
+  Inputs:  A_sign=0, B_sign=0, A=100000, B=080000
+  Outputs: Sum=180000, Sign=0, Overflow=0
+
+✓ PASS:                  1.0 + 0.5 = 1.5
+
+Test 2:    Same sign addition (negative)
+  Inputs:  A_sign=1, B_sign=1, A=200000, B=100000
+  Outputs: Sum=300000, Sign=1, Overflow=0
+
+✓ PASS:           (-2.0) + (-1.0) = -3.0
+
+Test 3:           Different signs, A > B
+  Inputs:  A_sign=0, B_sign=1, A=300000, B=100000
+  Outputs: Sum=200000, Sign=0, Overflow=0
+
+✓ PASS:                  3.0 - 1.0 = 2.0
+
+Test 4:           Different signs, A < B
+  Inputs:  A_sign=0, B_sign=1, A=100000, B=300000
+  Outputs: Sum=200000, Sign=1, Overflow=0
+
+✓ PASS:                 1.0 - 3.0 = -2.0
+
+Test 5:           Different signs, A = B
+  Inputs:  A_sign=0, B_sign=1, A=200000, B=200000
+  Outputs: Sum=000000, Sign=0, Overflow=0
+
+✓ PASS:                  2.0 - 2.0 = 0.0
+
+Test 6:                    Overflow test
+  Inputs:  A_sign=0, B_sign=0, A=7fffff, B=000001
+  Outputs: Sum=000000, Sign=0, Overflow=1
+
+✓ PASS:          Max + 1 causes overflow
+
+Test 7:         Large numbers, same sign
+  Inputs:  A_sign=1, B_sign=1, A=400000, B=200000
+  Outputs: Sum=600000, Sign=1, Overflow=0
+
+✓ PASS:          Large negative addition
+
+Test 8:   Small numbers, different signs
+  Inputs:  A_sign=0, B_sign=1, A=000010, B=000008
+  Outputs: Sum=000008, Sign=0, Overflow=0
+
+✓ PASS:                Small subtraction
+
+Test 9:                  Zero + non-zero
+  Inputs:  A_sign=0, B_sign=0, A=000000, B=100000
+  Outputs: Sum=100000, Sign=0, Overflow=0
+
+✓ PASS:                    0 + 1.0 = 1.0
+
+Test 10:                    Zero handling
+  Inputs:  A_sign=0, B_sign=1, A=000000, B=000000
+  Outputs: Sum=000000, Sign=0, Overflow=0
+
+✓ PASS:                        0 - 0 = 0
+
+Test 11:          Maximum values addition
+  Inputs:  A_sign=0, B_sign=0, A=7fffff, B=7fffff
+  Outputs: Sum=7ffffe, Sign=0, Overflow=1
+
+✓ PASS:             Max + Max = Overflow
+
+Test 12:         Alternating bit patterns
+  Inputs:  A_sign=1, B_sign=0, A=555555, B=2aaaaa
+  Outputs: Sum=2aaaab, Sign=1, Overflow=0
+
+✓ PASS:            Alternating bits test
+
+========================================
+Test Summary:
+Total Tests: 12
+Passed:      12
+Failed:      0
+🎉 ALL TESTS PASSED!
+========================================
+$finish called at time : 130 ns : File "D:/OneDrive/Desktop/vivado_projects/mantissa_addsub_32/mantissa_addsub_32.srcs/sim_1/new/mantissa_addsub_32_tb.v" Line 203
